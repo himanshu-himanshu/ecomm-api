@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const { MONGODB_LOCAL_URL } = process.env;
+const { MONGODB_COMPASS_URL } = process.env;
 
 /**
  * -----------------------------------------------
@@ -10,7 +10,7 @@ const { MONGODB_LOCAL_URL } = process.env;
  */
 exports.connect = () => {
   mongoose
-    .connect(MONGODB_LOCAL_URL, {
+    .connect(MONGODB_COMPASS_URL, {
       useNewUrlParser: true,
     })
     .then(() => {
